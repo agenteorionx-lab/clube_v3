@@ -22,10 +22,20 @@ jobs:
             # Caminho onde está o seu projeto na VPS
             cd /root/clube-v3
             
-            # Puxa as atualizações do GitHub
-            git pull origin main || git pull origin master
+            # Prepara a pasta na VPS caso seja a primeira vez
+            if [ ! -d ".git" ]; then
+              git init
+              git remote add origin https://github.com/agenteorionx-lab/clube_v3.git
+              git branch -M main
+              git fetch
+              git reset --hard origin/main
+            else
+              # Se já for um repositório git, apenas descarta mudanças locais e puxa do GitHub
+              git reset --hard HEAD
+              git pull origin main
+            fi
             
-            # Instala os pacotes do Node se houver alguma biblioteca nova
+            # Instala dependências e reinicia o servidor
             npm install
             
             # Reinicia o servidor no PM2
