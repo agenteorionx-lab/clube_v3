@@ -1,0 +1,4 @@
+node_modules/
+clube.db
+.env
+clube-deploy.zip

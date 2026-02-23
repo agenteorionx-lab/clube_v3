@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Clube v3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#2f767d',
+                            50: '#eef8f9',
+                            100: '#d5eff1',
+                            200: '#a8dde2',
+                            300: '#6fc5cd',
+                            400: '#41a8ad',
+                            500: '#2f767d',
+                            600: '#285f65',
+                            700: '#224d52',
+                            800: '#1b3d41',
+                            900: '#153133',
+                        },
+                        accent: {
+                            DEFAULT: '#3bdbc0',
+                            50: '#edfdf9',
+                            100: '#d0faf0',
+                            200: '#a3f4e2',
+                            300: '#6aebce',
+                            400: '#3bdbc0',
+                            500: '#2db99f',
+                            600: '#229680',
+                            700: '#1a7363',
+                            800: '#155a4d',
+                            900: '#104a40',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+        }
+
+        /* Video Background */
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            /* Forçar aceleração de hardware na GPU para parar o lag */
+            transform: translateZ(0);
+            will-change: transform;
+            -webkit-transform: translateZ(0);
+        }
+
+        /* Overlay (20% darker) */
+        .video-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Glassmorphism card */
+        .glass-card {
+            background: rgba(21, 49, 51, 0.65);
+            /* Fundo escuro transparente (cor da marca) */
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow:
+                0 25px 50px rgba(0, 0, 0, 0.35),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        /* Subtle floating animation */
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        /* Input glow on focus */
+        .input-glow:focus {
+            box-shadow: 0 0 0 3px rgba(59, 219, 192, 0.25);
+            border-color: #3bdbc0;
+        }
+
+        /* Button shine effect */
+        .btn-shine {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-shine::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to right,
+                    transparent,
+                    rgba(255, 255, 255, 0.15),
+                    transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                transform: translateX(-100%) rotate(45deg);
+            }
+
+            100% {
+                transform: translateX(100%) rotate(45deg);
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .video-bg {
+                width: auto;
+                height: 100%;
+                min-width: 100%;
+                object-position: center;
+            }
+
+            .glass-card {
+                margin: 1rem;
+                padding: 2rem !important;
+                border-radius: 1.5rem !important;
+            }
+
+            .float-animation {
+                animation: float 6s ease-in-out infinite;
+            }
+
+            @keyframes float {
+
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+
+                50% {
+                    transform: translateY(-4px);
+                }
+            }
+        }
+
+        @media (max-width: 400px) {
+            .glass-card {
+                margin: 0.75rem;
+                padding: 1.5rem !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="flex items-center justify-center h-screen">
+
+    <!-- Video Background -->
+    <video id="bgVideo" class="video-bg" autoplay muted loop playsinline preload="auto">
+        <source src="img/bg-video.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+
+    <!-- Login Card -->
+    <div class="glass-card p-10 rounded-3xl w-full max-w-md float-animation relative z-10">
+        <!-- Logo -->
+        <div class="flex justify-center mb-8">
+            <img src="img/logo-white.png" alt="Clube v3" class="h-14 w-auto drop-shadow-xl">
+        </div>
+
+        <!-- Title -->
+        <h1 class="text-3xl font-bold text-center mb-2 text-white drop-shadow-md">Acesso ao Clube</h1>
+        <p class="text-center text-sm font-semibold text-white/90 mb-8 drop-shadow">Entre com suas credenciais</p>
+
+        <!-- Form -->
+        <form id="loginForm" class="space-y-6">
+            <div>
+                <label for="email" class="block text-sm font-bold text-white mb-2 drop-shadow">Email</label>
+                <input type="email" id="email" name="email" required placeholder="seu@email.com"
+                    class="input-glow mt-1 block w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl shadow-sm focus:outline-none transition-all duration-200 text-white placeholder-gray-400 font-medium">
+            </div>
+
+            <div>
+                <label for="password" class="block text-sm font-bold text-white mb-2 drop-shadow">Senha</label>
+                <input type="password" id="password" name="password" required placeholder="••••••••"
+                    class="input-glow mt-1 block w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl shadow-sm focus:outline-none transition-all duration-200 text-white placeholder-gray-400 font-medium">
+            </div>
+
+            <div id="errorMessage" class="text-red-400 text-sm hidden text-center font-bold drop-shadow"></div>
+
+            <button type="submit"
+                class="btn-shine w-full flex justify-center py-3.5 px-4 border border-transparent rounded-xl text-base font-bold text-white bg-gradient-to-r from-brand-500 via-brand-400 to-accent-400 hover:from-brand-600 hover:via-brand-500 hover:to-accent-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-400 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 mt-2">
+                Entrar
+            </button>
+        </form>
+
+        <!-- Footer subtle text -->
+        <p class="text-center text-xs text-gray-400 mt-6 md:mt-8">Clube V3 &copy; 2026 — Todos os direitos reservados
+        </p>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

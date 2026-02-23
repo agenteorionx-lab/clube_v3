@@ -1,0 +1,32 @@
+name: Deploy Clube v3 to Contabo VPS
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: |
+            # Caminho onde está o seu projeto na VPS
+            cd /root/clube-v3
+            
+            # Puxa as atualizações do GitHub
+            git pull origin main || git pull origin master
+            
+            # Instala os pacotes do Node se houver alguma biblioteca nova
+            npm install
+            
+            # Reinicia o servidor no PM2
+            pm2 restart server.js

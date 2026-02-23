@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Clube V3 - O seu clube de benefícios exclusivo. Descontos, experiências e vantagens que valorizam você.">
+    <title>Clube V3 | O Seu Clube de Benefícios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=71">
+    <style>
+        /* CRITICAL MOBILE OVERRIDES (INJECTED) - REMOVED CONFLICTING FLEX RULES TO ALLOW GRID ORDER */
+        @media (max-width: 768px) {
+
+            .hero h1,
+            #hero_title1,
+            #hero_title2 {
+                text-align: center !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            .hero p,
+            #hero_subtitle {
+                text-align: center !important;
+                margin: 0 auto 2rem !important;
+                width: 90% !important;
+                display: block !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Loader -->
+    <div id="page-loader">
+        <div class="loader-content">
+            <img src="Logo-ClubeV3-white.png" class="logo-img" alt="Clube V3" style="width: 151px;">
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+    <div class="bg-animation"></div>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo-link"><img src="Logo-ClubeV3-white.png" class="logo-img" alt="Clube V3"></a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+            <ul class="nav-links">
+                <li><a href="#features" id="nav_link1_link"><span id="nav_link1_text">Recursos</span></a></li>
+                <li><a href="#benefits" id="nav_link2_link"><span id="nav_link2_text">Vantagens</span></a></li>
+                <li><a href="#about" id="nav_link3_link"><span id="nav_link3_text">Sobre</span></a></li>
+                <li><a href="#contact" id="nav_link4_link"><span id="nav_link4_text">Contato</span></a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="#" class="btn btn-outline" id="nav_btn_login">Entrar</a>
+                <a href="#pricing" class="btn btn-primary" id="nav_btn_cta">Assinar Agora</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 id="hero_title1">Saúde de qualidade<br><span id="hero_title2">que cabe no bolso.</span></h1>
+                <p id="hero_subtitle">
+                    Acesso a consultas, exames e cirurgias com <span class="highlight-text">descontos exclusivos</span>.
+                    <span class="highlight-text">Sem carência, sem burocracia</span>. Proteja sua família a partir de
+                    <span class="highlight-text">R$ 40/mês</span>.
+                </p>
+            </div>
+
+            <!-- Metrics -->
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-value">+20</div>
+                    <div class="stat-label">Especialidades</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">Sem Carência</div>
+                    <div class="stat-label">Uso Imediato</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">4.9 ★</div>
+                    <div class="stat-label">Avaliação nas lojas</div>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="hero-buttons">
+                <a href="#pricing" class="btn btn-accent" id="hero_btn_primary_link">
+                    <span id="hero_btn_primary">Quero meu plano</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Card -->
+            <div class="hero-visual">
+                <img src="card-static.png" class="card-static-image" alt="Cartão Clube V3">
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title" id="features_title">Tudo para sua saúde</h2>
+                <p class="section-subtitle" id="features_subtitle">Uma rede completa de atendimento
+                    médico e hospitalar à sua disposição. </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon" id="feature1_icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.3.3 0 1 0 .2.3V4a1 1 0 0 1 1 1v5a4 4 0 0 1-4 4 4 4 0 0 1-4-4V5a1 1 0 0 1 1-1Z" />
+                            <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4" />
+                            <circle cx="20" cy="10" r="2" />
+                        </svg>
+                    </div>
+                    <h3 id="feature1_title">Consultas Médicas</h3>
+                    <p id="feature1_desc">Acesso a mais de 20 especialidades como Cardiologia,
+                        Pediatria,
+                        Ginecologia,
+                        Neurologia e muito mais. </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" id="feature2_icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 18h8" />
+                            <path d="M3 22h18" />
+                            <path d="M14 22a7 7 0 1 0 0-14h-1" />
+                            <path d="M9 14h2" />
+                            <path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z" />
+                            <path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3" />
+                        </svg>
+                    </div>
+                    <h3 id="feature2_title">Exames Laboratoriais</h3>
+                    <p id="feature2_desc">Descontos exclusivos em exames de sangue,
+                        check-ups completos e diagnósticos precisos. </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" id="feature3_icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="18" height="12" x="3" y="7" rx="2" />
+                            <path d="M3 15h18" />
+                            <path d="M12 3v18" />
+                            <path d="M8 3v4" />
+                            <path d="M16 3v4" />
+                        </svg>
+                    </div>
+                    <h3 id="feature3_title">Imagem e Diagnóstico</h3>
+                    <p id="feature3_desc">Ultrassonografia,
+                        Endoscopia,
+                        Tomografia e exames de alta complexidade com preços acessíveis. </p>
+                </div>
+                <!-- Os outros cards são estáticos no exemplo original do form admin, mantidos apenas
+                                    visualmente -->
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 6V4" />
+                            <path
+                                d="M16.5 4h-9a2.5 2.5 0 0 0-2.5 2.5v7.5L5 15.5v2.5a2.5 2.5 0 0 0 2.5 2.5h9a2.5 2.5 0 0 0 2.5-2.5v-2.5l2-1.5V6.5A2.5 2.5 0 0 0 18.5 4h-2" />
+                            <path d="M8 10h8" />
+                            <path d="M8 14h8" />
+                        </svg>
+                    </div>
+                    <h3>Hospital Dia</h3>
+                    <p>Estrutura completa no Hospital Dr. Giovani para procedimentos e pequenas
+                        cirurgias com total segurança. </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+                            <path
+                                d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+                            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+                            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+                        </svg>
+                    </div>
+                    <h3>Ortopedia</h3>
+                    <p>Procedimentos especializados como infiltração,
+                        redução de fraturas e imobilização gessada. </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v20" />
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                    </div>
+                    <h3>Procedimentos Estéticos</h3>
+                    <p>Tratamento de varizes (espuma e convencional) e pequenas correções estéticas
+                        com especialistas. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Investimento que vale a vida</h2>
+                <p class="section-subtitle">Planos flexíveis para você e sua família. Sem surpresas
+                    no fim do mês. </p>
+            </div>
+            <div class="pricing-carousel-wrapper">
+                <button class="carousel-btn prev" onclick="scrollPlans(-1)">&#10094;</button>
+                <div class="pricing-grid" id="pricingGrid">
+                    <!-- Plano Plus Individual -->
+                    <div class="pricing-card" data-index="0">
+                        <h3 class="plan-name">Plus Individual</h3>
+                        <div class="plan-price">R$ 40<span>/mês</span></div>
+                        <p class="plan-description">Para quem busca proteção individual básica e
+                            acessível.</p>
+                        <ul class="plan-features">
+                            <li>Titular Individual</li>
+                            <li>Hospital Dia Dr. Giovani</li>
+                            <li>Consultas Especializadas</li>
+                            <li>Exames Laboratoriais</li>
+                            <li>Ultrassonografia</li>
+                            <li>Procedimentos Ortopédicos</li>
+                            <li class="disabled">Cirurgias</li>
+                            <li class="disabled">Dependentes</li>
+                        </ul><a
+                            href="https://wa.me/5538999853837?text=Ol%C3%A1%2C%20desejo%20informa%C3%A7%C3%B5es%20do%20plano%20Plus%20Individual"
+                            target="_blank" class="btn btn-outline" style="text-align: center;">Escolher Plano</a>
+                        <button class="btn-link" onclick="openPlanDetails('plus')">Ver cobertura completa</button>
+                    </div>
+                    <!-- Plano Plus Familiar (Featured) -->
+                    <div class="pricing-card featured" data-index="1">
+                        <h3 class="plan-name">Plus Familiar</h3>
+                        <div class="plan-price">R$ 50<span>/mês</span></div>
+                        <p class="plan-description">O melhor custo-benefício. Proteção para toda
+                            a família por apenas R$ 10 a mais.</p>
+                        <ul class="plan-features">
+                            <li>Titular+4 Dependentes</li>
+                            <li>Hospital Dia Dr. Giovani</li>
+                            <li>Consultas Especializadas</li>
+                            <li>Exames Laboratoriais</li>
+                            <li>Ultrassonografia</li>
+                            <li>Procedimentos Ortopédicos</li>
+                            <li class="disabled">Cirurgias</li>
+                        </ul><a
+                            href="https://wa.me/5538999853837?text=Ol%C3%A1%2C%20desejo%20informa%C3%A7%C3%B5es%20do%20plano%20Plus%20Familiar"
+                            target="_blank" class="btn btn-primary" style="text-align: center;">Escolher Plano</a>
+                        <button class="btn-link" onclick="openPlanDetails('plus')">Ver cobertura completa</button>
+                    </div>
+                    <!-- Plano Premium Individual -->
+                    <div class="pricing-card" data-index="2">
+                        <h3 class="plan-name">Premium Ind.</h3>
+                        <div class="plan-price">R$ 60<span>/mês</span></div>
+                        <p class="plan-description">Cobertura ampliada incluindo
+                            procedimentos cirúrgicos.</p>
+                        <ul class="plan-features">
+                            <li>Titular Individual</li>
+                            <li>Hospital Dia Dr. Giovani</li>
+                            <li>Consultas Especializadas</li>
+                            <li>Exames Laboratoriais</li>
+                            <li>Ultrassonografia</li>
+                            <li>Procedimentos Ortopédicos</li>
+                            <li><strong>Descontos em Cirurgias</strong></li>
+                            <li class="disabled">Dependentes</li>
+                        </ul><a
+                            href="https://wa.me/5538999853837?text=Ol%C3%A1%2C%20desejo%20informa%C3%A7%C3%B5es%20do%20plano%20Premium%20Individual!"
+                            target="_blank" class="btn btn-outline" style="text-align: center;">Escolher Plano</a>
+                        <button class="btn-link" onclick="openPlanDetails('premium')">Ver cobertura completa</button>
+                    </div>
+                    <!-- Plano Premium Familiar -->
+                    <div class="pricing-card" data-index="3">
+                        <h3 class="plan-name">Premium Fam.</h3>
+                        <div class="plan-price">R$ 110<span>/mês</span></div>
+                        <p class="plan-description">A proteção máxima para você e quem
+                            você ama.</p>
+                        <ul class="plan-features">
+                            <li>Titular+4 Dependentes</li>
+                            <li>Hospital Dia Dr. Giovani</li>
+                            <li>Consultas Especializadas</li>
+                            <li>Exames Laboratoriais</li>
+                            <li>Ultrassonografia</li>
+                            <li>Procedimentos Ortopédicos</li>
+                            <li><strong>Descontos em Cirurgias</strong></li>
+                        </ul><a
+                            href="https://wa.me/5538999853837?text=Ol%C3%A1%2C%20desejo%20informa%C3%A7%C3%B5es%20do%20plano%20Premium%20Familiar!"
+                            target="_blank" class="btn btn-outline" style="text-align: center;">Escolher Plano</a>
+                        <button class="btn-link" onclick="openPlanDetails('premium')">Ver cobertura completa</button>
+                    </div>
+                </div>
+                <button class="carousel-btn next" onclick="scrollPlans(1)">&#10095;</button>
+            </div>
+            <!-- Pricing Navigation -->
+            <div class="pricing-nav">
+                <button class="pricing-nav-btn" id="prevPlan" aria-label="Plano Anterior">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m15 18-6-6 6-6" />
+                    </svg>
+                </button>
+                <div class="pricing-dots" id="pricingDots">
+                    <span class="pricing-dot active" data-index="0"></span>
+                    <span class="pricing-dot" data-index="1"></span>
+                    <span class="pricing-dot" data-index="2"></span>
+                    <span class="pricing-dot" data-index="3"></span>
+                </div>
+                <button class="pricing-nav-btn" id="nextPlan" aria-label="Próximo Plano">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m9 18 6-6-6-6" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits-section">
+        <div class="benefits-container">
+            <div class="benefits-header">
+                <h2>Sua Saúde Simplificada</h2>
+                <p>Tudo o que você precisa para cuidar de você e da sua família, <span class="highlight-text">sem
+                        burocracia</span> e com <span class="highlight-text">acesso imediato</span>.
+                </p>
+            </div>
+
+            <div class="benefits-grid">
+                <!-- Grouped Content in Gray Block (Now on Left on Desktop) -->
+                <div class="benefits-group">
+                    <div class="benefit-list">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect width="20" height="14" x="2" y="5" rx="2" />
+                                    <line x1="2" x2="22" y1="10" y2="10" />
+                                </svg>
+                            </div>
+                            <div class="benefit-text">
+                                <h4>Tudo 100% Digital</h4>
+                                <p>Acesse sua carteirinha imediatamente após a adesão. Sem cartões de plástico.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                                </svg>
+                            </div>
+                            <div class="benefit-text">
+                                <h4>Sem Carência</h4>
+                                <p>Utilize os benefícios assim que confirmar sua assinatura. Usou, economizou.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+                                    <path d="M3 6h18" />
+                                    <path d="M16 10a4 4 0 0 1-8 0" />
+                                </svg>
+                            </div>
+                            <div class="benefit-text">
+                                <h4>Rede de Parceiros</h4>
+                                <p>Descontos reais em farmácias, clínicas e lojas parceiras selecionadas.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z" />
+                                    <path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1" />
+                                </svg>
+                            </div>
+                            <div class="benefit-text">
+                                <h4>Atendimento Ágil</h4>
+                                <p>Suporte humanizado e rápido para agendar suas consultas e exames.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual (Now on Right on Desktop) -->
+                <div class="benefits-visual">
+                    <div class="digital-card-container">
+                        <img src="card-static.png" class="card-static-image" alt="Cartão Clube V3">
+                        <div class="card-shine"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners-section">
+        <div class="partners-marquee-container">
+            <h2 class="partners-title">Parceiros Clube V3</h2>
+            <div class="partners-track">
+                <!-- First set of logos -->
+                <div class="partner-badge"><img src="parceiros/3.png" alt="Parceiro"></div>
+                <div class="partner-badge"><img src="parceiros/Clínica-A-Avatar-PDF--removebg-preview.png"
+                        alt="Parceiro"></div>
+                <div class="partner-badge"><img src="parceiros/IMG_5241__3_-removebg-preview.png" alt="Parceiro"></div>
+                <div class="partner-badge"><img src="parceiros/LOGO-GRUPO-RESSONAR-PDF-removebg-preview.png"
+                        alt="Parceiro"></div>
+                <div class="partner-badge"><img src="parceiros/LOGOMARCA-ROBLETOS-NOVA-removebg-preview.png"
+                        alt="Parceiro"></div>
+                <div class="partner-badge"><img
+                        src="parceiros/Sorrisus_Clinicas_Odontologicas_Logo-removebg-preview.png" alt="Parceiro"></div>
+                <div class="partner-badge"><img
+                        src="parceiros/WhatsApp_Image_2025-07-28_at_16.47.39-removebg-preview.png" alt="Parceiro"></div>
+                <div class="partner-badge"><img
+                        src="parceiros/WhatsApp_Image_2025-07-28_at_16.47.40-removebg-preview.png" alt="Parceiro"></div>
+                <div class="partner-badge"><img
+                        src="parceiros/WhatsApp_Image_2025-07-28_at_16.47.40__1_-removebg-preview.png" alt="Parceiro">
+                </div>
+                <!-- Duplicate set for seamless loop -->
+                <div class="partner-badge"><img src="parceiros/3.png" alt="Parceiro"></div>
+                <div class="partner-badge"><img src="parceiros/Clínica-A-Avatar-PDF--removebg-preview.png"
+                        alt="Parceiro"></div>
+                <div class="partner-badge"><img src="parceiros/IMG_5241__3_-removebg-preview.png" alt="Parceiro"></div>
+                <div class="partner-badge"><img src="parceiros/LOGO-GRUPO-RESSONAR-PDF-removebg-preview.png"
+                        alt="Parceiro"></div>
+                <div class="partner-badge"><img src="parceiros/LOGOMARCA-ROBLETOS-NOVA-removebg-preview.png"
+                        alt="Parceiro"></div>
+                <div class="partner-badge"><img
+                        src="parceiros/Sorrisus_Clinicas_Odontologicas_Logo-removebg-preview.png" alt="Parceiro"></div>
+                <div class="partner-badge"><img
+                        src="parceiros/WhatsApp_Image_2025-07-28_at_16.47.39-removebg-preview.png" alt="Parceiro"></div>
+                <div class="partner-badge"><img
+                        src="parceiros/WhatsApp_Image_2025-07-28_at_16.47.40-removebg-preview.png" alt="Parceiro"></div>
+                <div class="partner-badge"><img
+                        src="parceiros/WhatsApp_Image_2025-07-28_at_16.47.40__1_-removebg-preview.png" alt="Parceiro">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="section-container">
+            <h2 class="section-title">Dúvidas Frequentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question">Quais cidades o plano atende? <span class="icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Atualmente atendemos em toda a região metropolitana, com foco principal na capital e cidades
+                            vizinhas. Consulte a rede credenciada para detalhes.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Tem carência para usar? <span class="icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Não! Nossos planos não possuem carência. Assim que sua assinatura for confirmada, você já
+                            pode utilizar todos os benefícios e descontos.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Como acesso minha carteirinha? <span class="icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Sua carteirinha é 100% digital. Após a confirmação do pagamento, você recebe acesso ao nosso
+                            portal/app onde ela estará disponível.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Posso incluir dependentes? <span class="icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Sim! Você pode incluir seu cônjuge e filhos como dependentes nos planos familiares para que
+                            todos aproveitem os benefícios.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Quais as formas de pagamento? <span class="icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Aceitamos cartões de crédito (com recorrência mensal que não ocupa o limite), Pix e boleto
+                            bancário.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Como vejo a rede de médicos? <span class="icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>A lista completa de clínicas, médicos e laboratórios parceiros atualizada está disponível
+                            diretamente no nosso portal do aluno e app oficial.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Onde consigo os descontos em farmácias? <span
+                            class="icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Em qualquer unidade das redes parceiras (Pague Menos, Raia, Drogasil), basta apresentar seu
+                            CPF e sua carteirinha digital no balcão.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">O Clube V3 é um plano de saúde? <span class="icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Não somos um plano de saúde tradicional. Somos um clube de benefícios que oferece descontos
+                            agressivos em saúde (consultas e exames) e farmácias, sem carência e sem mensalidades
+                            abusivas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-box">
+            <h2 id="cta_title">Pronto para aproveitar o melhor da vida?</h2>
+            <p id="cta_subtitle">Junte-se ao clube que conecta você às melhores experiências.</p>
+            <a href="#pricing" class="btn btn-accent" id="cta_button_link">
+                <span id="cta_button">Assinar agora -></span>
+            </a>
+        </div>
+    </section>
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="section-container">
+            <div class="footer-simple">
+                <img src="Logo-ClubeV3-white.png" class="logo-img footer-logo" alt="Clube V3">
+
+                <div class="footer-legal">
+                    <a href="#">Termos de Uso</a>
+                    <span class="separator">|</span>
+                    <a href="#">Privacidade</a>
+                </div>
+
+                <div class="footer-copyright">
+                    © <span id="footer_year">2026</span> Clube V3. Todos os direitos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/5500000000000" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 448 512" fill="white">
+            <path
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.7 17.7 69.4 26.9 106 26.9h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.2-3.2-5.6-.3-8.6 2.4-11.3 2.5-2.4 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.6 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+        </svg>
+    </a>
+
+    <!-- Plan Details Modal -->
+    <div class="modal-overlay" id="planModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closePlanDetails()">&times;</button>
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle">Detalhes do Plano</h3>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

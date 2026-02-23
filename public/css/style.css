@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card-gradient {
+    background-color: #0d2a3a;
+    /* Dark teal fallback */
+    background: url('../img/card-bg.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    color: white !important;
+    font-family: 'Inter', sans-serif;
+    padding: 1.25rem !important;
+    /* Mais compacto */
+}
+
+.card-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #94a3b8;
+    /* gray-400 */
+    margin-bottom: 2px;
+    letter-spacing: 0.05em;
+}
+
+.card-value {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.plan-badge {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Print specific adjustments */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #idCardElement,
+    #idCardElement * {
+        visibility: visible;
+    }
+
+    #idCardElement {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 350px !important;
+        height: 220px !important;
+        border: 1px solid #000;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+}
