@@ -599,7 +599,8 @@ async function loadClients() {
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${client.cpf}</td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${client.plan}</td>
                             <td class="px-6 py-4 whitespace-nowrap"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${statusColor}">${client.status}</span></td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatDate(client.created_at || new Date().toISOString())}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatDate(client.created_at)}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatDate(client.start_date)}</td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${formatDate(client.next_due_date)}</td>
                             <td class="px-6 py-4 whitespace-nowrap text-center">
                                 <div class="inline-flex items-center space-x-1 bg-gray-50 px-3 py-1 rounded-full border border-gray-100 shadow-sm">

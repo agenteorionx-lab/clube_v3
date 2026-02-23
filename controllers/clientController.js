@@ -120,13 +120,15 @@ exports.confirmPayment = async (req, res) => {
 
         if (fetchError || !sub) return res.status(404).json({ message: 'Assinatura não encontrada' });
 
+        const today = new Date();
         const newDueDate = new Date();
-        newDueDate.setDate(newDueDate.getDate() + 30);
+        newDueDate.setDate(today.getDate() + 30);
 
         const { error: updateError } = await supabase
             .from('subscriptions')
             .update({
                 status: 'ativo',
+                start_date: today.toISOString().split('T')[0],
                 next_due_date: newDueDate.toISOString().split('T')[0]
             })
             .eq('client_id', clientId);
