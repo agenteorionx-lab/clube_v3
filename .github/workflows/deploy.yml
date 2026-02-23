@@ -38,5 +38,5 @@ jobs:
             # Instala dependências e reinicia o servidor
             npm install
             
-            # Reinicia o servidor no PM2
-            pm2 restart server.js
+            # Reinicia o servidor no PM2 (ou inicia se for a primeira vez)
+            pm2 restart clube-v3 || pm2 start server.js --name "clube-v3"
